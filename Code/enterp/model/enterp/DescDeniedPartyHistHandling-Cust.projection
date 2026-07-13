@@ -1,0 +1,123 @@
+projection DescDeniedPartyHistHandling;
+component ENTERP;
+layer Cust;
+description "Put some useful description here ...";
+category Users;
+
+--------------------------------- FRAGMENTS ---------------------------------
+/*include fragment SupplierCustomerLovSelector;
+include fragment PartyTypeCustomerSelector;
+include fragment PartyTypeSupplierSelector;
+*/
+----------------------------- MAIN ENTRY POINTS -----------------------------
+--entityset DescDeniedPartyHistSet for DescDeniedPartyHist;
+
+------------------------------ ENTITY DETAILS -------------------------------
+/*
+@Override
+entity DescDeniedPartyHist {
+
+   crud = Read, Create, Update, Delete;
+
+   attribute PartyId Text {
+      label = "Party ID";
+      maxlength = 20;
+      insertable = [true];
+      editable = [ETag = null];
+      required = [true];
+
+   }
+   attribute PartyType Enumeration(DescPartyTypeEnum) {
+      label = "Party Type";
+      maxlength = 10;
+      --format = uppercase;
+      insertable = [true];
+      editable = [ETag = null];
+      required = [true];
+   }
+   attribute AddressId Text {
+      label = "Address ID";
+      maxlength = 50;
+      insertable = [true];
+      editable = [ETag = null];
+      required = [true];
+   }
+   attribute CountryId Text {
+      label = "Country";
+      maxlength = 2;
+      format = uppercase;
+      insertable = [true];
+      editable = [ETag = null];
+      required = [true];
+   }
+   attribute CallType Text {
+      label = "Call Type";
+      maxlength = 20;
+      format = uppercase;
+      editable = [false];
+      insertable = [false];
+   }
+   attribute ComplianceCheckDate Date {
+      label = "Compliance Check Date";
+      insertable = [false];
+      editable = [false];
+   }
+   attribute Alert Text {
+      label = "Alert";
+      maxlength = 10;
+
+      insertable = [false];
+      editable = [false];
+   }
+   attribute Denied Boolean("TRUE", "FALSE") {
+      label = "Denied";
+   }
+   attribute DateDeactivated Date {
+      label = "Date Deactivated";
+   }
+   attribute DateActivated Date {
+      label = "Date Activated";
+   }
+   attribute EndUser Text {
+      label = "End User";
+      maxlength = 30;
+      editable = [false];
+      insertable = [false];
+      default = "fnd_session_api.get_fnd_user";
+
+   }
+
+   reference SupplierCustomerIdRef(PartyId) to SupplierCustomerLov(Identity) {
+      label = "Party ID";
+   }
+   reference SupplierIdRef(PartyId) to PartyTypeSupplier(Identity) {
+      label = "Party ID";
+   }
+   reference CustomerIdRef(PartyId) to PartyTypeCustomer(Identity) {
+      label = "Party ID";
+   }
+}
+
+*/
+------------------------------- ENUMERATIONS --------------------------------
+
+
+---------------------------------- QUERIES ----------------------------------
+
+
+---------------------------------- ACTIONS ----------------------------------
+
+
+--------------------------------- FUNCTIONS ---------------------------------
+
+
+-------------------------------- STRUCTURES ---------------------------------
+
+
+--------------------------------- VIRTUALS ----------------------------------
+
+
+--------------------------------- SUMMARIES ---------------------------------
+
+
+-------------------------------- SINGLETONS ---------------------------------

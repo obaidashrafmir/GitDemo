@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UTILITY xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:ifsworld-com:schemas:utility_utility">
+   <CODE_GENERATION_PROPERTIES>
+      <CODE_GENERATION_PROPERTIES>
+      </CODE_GENERATION_PROPERTIES>
+   </CODE_GENERATION_PROPERTIES>
+   <COMMENTS>
+      <COMMENT>
+         <POSITION>0</POSITION>
+         <COMMENT_TEXT>/*
+---------------------------------------------------------------------------------------------------------------------------
+--  Date    Sign       History
+------      ------     ----------------------------------------------------------------------------------------------------
+--  250925  ACCANILAA  M-1428 : Deliverable 1699 : Created
+---------------------------------------------------------------------------------------------------------------------------
+*/</COMMENT_TEXT>
+      </COMMENT>
+   </COMMENTS>
+   <NAME>ShipmentFlow</NAME>
+   <COMPONENT>SHPMNT</COMPONENT>
+   <LAYER>Cust</LAYER>
+</UTILITY>

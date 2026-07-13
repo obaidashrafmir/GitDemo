@@ -1,0 +1,109 @@
+client DescDeniedPartyHist;
+component ENTERP;
+layer Cust;
+projection DescDeniedPartyHistHandling;
+
+description "Put some useful description here ...";
+
+--------------------------------- FRAGMENTS ---------------------------------
+--include fragment SupplierCustomerLovSelector;
+--include fragment PartyTypeCustomerSelector;
+--include fragment PartyTypeSupplierSelector;
+
+----------------------------- NAVIGATOR ENTRIES -----------------------------
+/*navigator {
+   @DynamicComponentDependency EXPCTR
+   entry DescDeniedPartyHistNavEntry parent ExpctrNavigator.ExportControlDeniedParty at index 900 {
+      label = "Descartes Denied Party History";
+      page List;
+   }
+}
+*/
+-------------------------------- MAIN PAGES ---------------------------------
+/*page List using DescDeniedPartyHistSet {
+   label = "Descartes Denied Party History";
+   list DescDeniedPartyHistList;
+}*/
+
+--------------------------------- COMMANDS ----------------------------------
+
+
+--------------------------------- SELECTORS ---------------------------------
+
+
+---------------------------------- GROUPS -----------------------------------
+
+
+----------------------------------- LISTS -----------------------------------
+/*
+list DescDeniedPartyHistList for DescDeniedPartyHist {
+   field PartyId {
+      label = "Party ID";
+      lovswitch {
+         when [PartyType = "Supplier"] {
+            @DynamicComponentDependency PURCH
+            lov SupplierIdRef with ReferencePartyTypeSupplierSelector {
+               search = Identity, Name;
+               description = SupplierIdRef.Name;
+            }
+         }
+         when [PartyType = "Customer"] {
+            lov CustomerIdRef with ReferencePartyTypeCustomerSelector {
+               search = Identity, Name;
+               description = CustomerIdRef.Name;
+            }
+         }
+         when [PartyType = null] {
+            lov SupplierCustomerIdRef with ReferenceSupplierCustomerLovSelector {
+               search = Identity, Name;
+               description = SupplierCustomerIdRef.Name;
+            }
+         }
+      }
+   }
+   field PartyType;
+   field AddressId;
+   field CountryId;
+   field CallType;
+   field ComplianceCheckDate;
+   field Alert {
+      emphasis Complementary7 = [Alert = "Y"];
+      emphasis Complementary4 = [Alert = "R"];
+      emphasis Complementary1 = [Alert = "DR" or Alert = "TR"];
+   }
+   field Denied {
+      emphasis Complementary1 = [Denied = true];
+      emphasis Complementary5 = [Denied = false];
+   }
+   field DateDeactivated;
+   field DateActivated;
+   field EndUser;
+
+
+}*/
+
+---------------------------------- DIALOGS ----------------------------------
+
+
+-------------------------------- SINGLETONS ---------------------------------
+
+
+---------------------------------- CHARTS -----------------------------------
+
+
+--------------------------------- CALENDERS ---------------------------------
+
+
+---------------------------------- SHEETS -----------------------------------
+
+
+----------------------------- STATE INDICATORS ------------------------------
+
+
+----------------------------------- TREES -----------------------------------
+
+
+---------------------------------- PLUGINS ----------------------------------
+
+
+------------------------------- IMAGE VIEWERS -------------------------------

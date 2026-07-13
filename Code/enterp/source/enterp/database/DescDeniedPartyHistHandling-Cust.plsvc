@@ -1,0 +1,26 @@
+-----------------------------------------------------------------------------
+--
+--  Logical unit: DescDeniedPartyHistHandling
+--  Component:    ENTERP
+--
+--  IFS Developer Studio Template Version 3.0
+--
+--  Date    Sign    History
+--  ------  ------  ---------------------------------------------------------
+-----------------------------------------------------------------------------
+
+layer Cust;
+/*
+@Override
+PROCEDURE CRUD_Default___ (
+   rec_ IN OUT Desc_Denied_Party_Hist_Rec )
+IS
+BEGIN
+   
+   super(rec_);
+   rec_.log_id :=  DESC_DENIED_PARTY_HIST_SEQ.NEXTVAL;
+   --Add post-processing code here
+END CRUD_Default___;
+
+
+*/
